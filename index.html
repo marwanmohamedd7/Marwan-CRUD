@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container bg-secondary mt-5 p-3">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card bg-white">
+                    <div class="card-header">
+                        <h2 class="text-center">Add User</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="userName" class="form-label my-1">User Name:</label>
+                            <input type="text" class="form-control" name="Uname" id="userName"
+                                placeholder="Example: example_user99" />
+                        </div>
+                        <div class="form-group">
+                            <label for="E-mail" class="form-label my-1">E-mail Address</label>
+                            <input class="form-control" type="email" name="email" id="E-mail"
+                                placeholder="Example: example_user99@gmail.com" />
+                        </div>
+                        <div class="mt-3">
+                            <button class="btn btn-primary btn-1 float-end" onclick="handleData()">Submit</button>
+                            <button class="btn btn-primary btn-2 float-end d-none"
+                                onclick="updateConfirm()">Update</button>
+                        </div>
+                        <div class="w-100 mt-4">
+                            <span id="message-success"
+                                class="alert alert-success d-none fw-bold text-capitalize"></span>
+                            <span id="message-fail" class="alert alert-danger d-none fw-bold text-capitalize"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <table class="table table-bordered text-white text-center">
+                    <thead class="text">
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>E-mail</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody id="tbData">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
